@@ -24,10 +24,12 @@ export default {
       }
     ]
   },
+
+  css: ['@/assets/base/_variables.scss'],
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#000' },
+  loading: { color: '#3a3a3c' },
   /*
    ** Plugins to load before mounting the App
    */
@@ -44,8 +46,8 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
     '@nuxtjs/style-resources',
+    '@nuxtjs/bulma',
     'nuxt-webfontloader'
   ],
 

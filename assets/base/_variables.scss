@@ -1,2 +1,18 @@
-$family-sans-serif:     "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$family-monospace:      "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+/* Import Bulma Utilities */
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+$black: #252525;
+$body-background-color: $black;
+
+$family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  'Helvetica Neue', sans-serif;
+
+$family-monospace: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+/* Variable changes go here */
+
+/* Import the rest of Bulma */
+@import '~bulma';
