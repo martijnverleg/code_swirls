@@ -3,21 +3,23 @@
 
 const triShapes = []
 
-let shape
-let maxTriShapesize
 let canvasWidth
 let canvasHeight
+let canvas
+
+let shape
+let maxTriShapesize
+let playing = true
 
 function setup() {
   canvasWidth = windowWidth
   canvasHeight = windowHeight
 
-  const canvas = createCanvas(canvasWidth, canvasHeight)
-  canvas.parent('canvas')
+  canvas = createCanvas(canvasWidth, canvasHeight)
+  canvas.parent('hero')
 
   angleMode(DEGREES)
   frameRate(30)
-  background(255, 255, 255)
 
   noFill()
   strokeWeight(15)
@@ -32,9 +34,15 @@ function setup() {
     triShapes.push(new TriShape((1 / 25) * i, shape))
     triShapes[i].render()
   }
+
+  canvas.mouseOver(() => (playing = true))
+  canvas.mouseOut(() => (playing = false))
 }
 
 function draw() {
+  if (!playing) {
+    return
+  }
   background(0)
 
   let scaleAdder = (0.001 / canvasHeight) * mouseY + 0.0015

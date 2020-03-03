@@ -1,10 +1,10 @@
 <template v-once>
-  <div id="canvas" class="is-relative">
+  <section id="hero" class="hero is-relative">
     <header class="header">
       <h1 class="header__title">Code_Swirls</h1>
       <h2 class="header__subtitle">Work in progress.</h2>
     </header>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
+.hero {
+  margin-bottom: 2rem;
+}
+
 .header {
   position: absolute;
   top: 50%;
@@ -36,6 +40,7 @@ export default {
   z-index: 100;
   text-align: center;
   text-shadow: #000 0 0 16px;
+  pointer-events: none;
 }
 
 .header__title {
